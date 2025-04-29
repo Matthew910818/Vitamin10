@@ -13,7 +13,7 @@ function App() {
   const fetchQuote = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('http://localhost:5001/api/quote');
+      const response = await fetch('https://vitamin10-e58r.onrender.com/api/quote');
       
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -40,7 +40,7 @@ function App() {
           ) : error ? (
             <div className="error">
               <p>{error}</p>
-              <p>Is your Flask backend running at http://localhost:5001?</p>
+              <p>Is your Flask backend running at https://vitamin10-e58r.onrender.com?</p>
             </div>
           ) : (
             <blockquote className="quote">
